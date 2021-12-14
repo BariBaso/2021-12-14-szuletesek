@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
 
 namespace _2021_12_14_szuletesek
 {
@@ -6,7 +8,13 @@ namespace _2021_12_14_szuletesek
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            List<szemely> szemelyek = new List<szemely>();
+
+            foreach (var sor in File.ReadAllLines("vas.txt"))
+            {
+                szemelyek.Add(new szemely(sor));
+            }
+
         }
     }
 }
