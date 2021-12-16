@@ -14,17 +14,16 @@ namespace _2021_12_14_szuletesek
             get
             {
                 string sz = SzemelyiSzam.Replace("-","");
-                int CheckSum = sz[sz.Length];
-                int a = 10;
+                int CheckSum = int.Parse(sz.Last().ToString());
                 int ösz =0;
                 for (int i = 0; i < sz.Length-1; i++)
                 {
-                    ösz=+ sz[i] * a;
-                    a--;
+                    ösz += int.Parse(sz[i].ToString()) * (10-i);
+                   
                 }
 
 
-                return false;
+                return CheckSum == ösz % 11;
             }
         
         }

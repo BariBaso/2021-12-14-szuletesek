@@ -15,6 +15,7 @@ namespace _2021_12_14_szuletesek
                 szemelyek.Add(new szemely(sor));
             }
 
+        
         }
     }
 }
